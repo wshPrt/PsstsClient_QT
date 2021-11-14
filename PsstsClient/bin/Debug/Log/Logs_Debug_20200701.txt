@@ -1,0 +1,117 @@
+日志时间：2020-07-01 00:08:10,146 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+绑定成功，返回秘钥：fuebbzeqhkdocfcqcvfmd2fzcbfjd567 
+ 日志时间：2020-07-01 00:09:02,442 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+绑定成功，返回秘钥：d+6efkbihwbpcmhwhiend=h#cye*e8hk 
+ 日志时间：2020-07-01 00:09:13,118 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:09:21,707 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838093588857856","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":\"1111\",\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:22,283 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"请求成功","jsonData":"[{\"ctlMode\":\"03\",\"isCanPay\":\"0\"}]","mainLogRecordId":0,"requestId":14838093588857856,"status":"0000"} 
+ 日志时间：2020-07-01 00:09:22,754 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:09:24,481 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838093634946048","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":null,\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:24,523 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"系统错误","mainLogRecordId":0,"requestId":14838093634946048,"status":"101"} 
+ 日志时间：2020-07-01 00:09:28,621 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838093702775808","businessType":"payService","businessMethod":"electricchargeinfos","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:28,669 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"electricchargeinfos","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838093702775808,"status":"101"} 
+ 日志时间：2020-07-01 00:09:31,064 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838093742801920","businessType":"payService","businessMethod":"powerPurchaseInfo","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:31,106 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"powerPurchaseInfo","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838093742801920,"status":"101"} 
+ 日志时间：2020-07-01 00:09:32,564 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:09:33,127 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838093776602112","businessType":"payService","businessMethod":"fees","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:33,169 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"fees","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838093776602112,"status":"101"} 
+ 日志时间：2020-07-01 00:09:41,349 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838093911311360","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":\"111\",\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:09:41,424 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"请求成功","jsonData":"[{\"ctlMode\":\"03\",\"isCanPay\":\"0\"}]","mainLogRecordId":0,"requestId":14838093911311360,"status":"0000"} 
+ 日志时间：2020-07-01 00:09:41,425 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+插卡绑定发送报文：{"requestId":"14838093912540160","businessType":"businessBindService","businessMethod":"bind","jsonData":null} 
+ 日志时间：2020-07-01 00:09:41,471 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+插卡绑定返回数据：{"businessMethod":"bind","businessType":"businessBindService","error":"绑定失败channel=e6e47ffffe8be706-00000031-000212cc-407bccc070cce7e7-32614080 business is null","mainLogRecordId":0,"requestId":14838093912540160,"status":"104"} 
+ 日志时间：2020-07-01 00:09:42,514 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:09:52,500 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:10:00,646 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+不允许插卡成功 
+ 日志时间：2020-07-01 00:10:02,540 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:10:12,498 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:10:22,500 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:10:25,298 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+操作员登录发送报文：{"requestId":"14838094631371776","businessType":"commonService","businessMethod":"chargeEmpLogin","jsonData":"{\"pwd\":\"dicpsi9999\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"username\":\"dicpsi9999\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:10:25,568 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+操作员登录返回结果：{"businessMethod":"chargeEmpLogin","businessType":"commonService","error":"请求成功","jsonData":"{\"msg\":\"500 \",\"verify\":false}","mainLogRecordId":0,"requestId":14838094631371776,"status":"0000"} 
+ 日志时间：2020-07-01 00:10:32,498 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:27:36,792 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+绑定成功，返回秘钥：e76nc+cxfg6qdfdehyc6b8bpc3h#dih* 
+ 日志时间：2020-07-01 00:28:07,012 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+绑定成功，返回秘钥：f#fbd=hkbpfhdpb5bzexech-e4b4eoc^ 
+ 日志时间：2020-07-01 00:28:17,264 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:28:27,064 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:28:30,627 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838112412943360","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":\"11\",\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:30,685 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"请求成功","jsonData":"[{\"ctlMode\":\"03\",\"isCanPay\":\"0\"}]","mainLogRecordId":0,"requestId":14838112412943360,"status":"0000"} 
+ 日志时间：2020-07-01 00:28:32,503 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838112444138496","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":null,\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:32,544 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"系统错误","mainLogRecordId":0,"requestId":14838112444138496,"status":"101"} 
+ 日志时间：2020-07-01 00:28:36,644 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838112511984640","businessType":"payService","businessMethod":"electricchargeinfos","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:36,683 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"electricchargeinfos","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838112511984640,"status":"101"} 
+ 日志时间：2020-07-01 00:28:37,060 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:28:39,062 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838112551601152","businessType":"payService","businessMethod":"powerPurchaseInfo","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:39,100 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"powerPurchaseInfo","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838112551601152,"status":"101"} 
+ 日志时间：2020-07-01 00:28:41,013 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+发送报文：{"requestId":"14838112583566336","businessType":"payService","businessMethod":"fees","jsonData":"{\"orgNo\":null,\"endYm\":\"202007\",\"bgnYm\":\"202001\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"consNo\":null,\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:41,058 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+返回结果：{"businessMethod":"fees","businessType":"payService","error":"系统错误","mainLogRecordId":0,"requestId":14838112583566336,"status":"101"} 
+ 日志时间：2020-07-01 00:28:47,076 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:28:48,280 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+不允许插卡成功 
+ 日志时间：2020-07-01 00:28:53,204 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询发送报文：{"requestId":"14838112783303680","businessType":"archivesService","businessMethod":"queryCustomerInfo","jsonData":"{\"queryType\":\"1\",\"channelNo\":\"DKCS_ST\",\"queryNo\":\"11\",\"mac\":\"94E6F7640BB3\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:28:53,257 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+客户基本信息查询返回数据：{"businessMethod":"queryCustomerInfo","businessType":"archivesService","error":"请求成功","jsonData":"[{\"ctlMode\":\"03\",\"isCanPay\":\"0\"}]","mainLogRecordId":0,"requestId":14838112783303680,"status":"0000"} 
+ 日志时间：2020-07-01 00:28:53,258 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+插卡绑定发送报文：{"requestId":"14838112784172032","businessType":"businessBindService","businessMethod":"bind","jsonData":null} 
+ 日志时间：2020-07-01 00:28:53,291 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+插卡绑定返回数据：{"businessMethod":"bind","businessType":"businessBindService","error":"绑定失败channel=e6e47ffffe8be706-00000031-00022869-b68bc1419bbf5eeb-30b413bd business is null","mainLogRecordId":0,"requestId":14838112784172032,"status":"104"} 
+ 日志时间：2020-07-01 00:28:57,063 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:29:07,097 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:31:54,988 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+操作员登录发送报文：{"requestId":"14838113502839808","businessType":"commonService","businessMethod":"chargeEmpLogin","jsonData":"{\"pwd\":\"2222\",\"mac\":\"94E6F7640BB3\",\"channelNo\":\"DKCS_ST\",\"username\":\"1111\",\"chargeEmpNo\":\"bbb\",\"terminalNo\":\"DKA001\"}"} 
+ 日志时间：2020-07-01 00:34:47,785 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+连接错误码：ConnectionAborted 
+ 日志时间：2020-07-01 00:34:52,594 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+Win32错误码：10053 
+ 日志时间：2020-07-01 00:35:16,542 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+操作员登录返回结果： 
+ 日志时间：2020-07-01 00:35:50,736 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 日志时间：2020-07-01 00:35:50,766 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+心跳连接错误码：ConnectionAborted 
+ 日志时间：2020-07-01 00:35:57,074 [1] 线程ID:[1] 日志级别：DEBUG 日 志 类：logdebug 
+读取到的上报记录：[] 
+ 

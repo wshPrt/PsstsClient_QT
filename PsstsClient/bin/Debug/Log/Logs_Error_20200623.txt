@@ -1,0 +1,10 @@
+异常时间：2020-06-23 14:14:30,483 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+ShowWaiting 
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Forms.ShowWaiting..ctor(Control ctl, String Msg) 位置 D:\work\WH024_SCSTZD\trunk\40_代码管理\PsstsClient\Forms\ShowWaiting.cs:行号 30
+   在 PsstsClient.Utility.Common.ShowWaiting(Control ctl, String Msg) 位置 D:\work\WH024_SCSTZD\trunk\40_代码管理\PsstsClient\Utility\Common.cs:行号 80
+异常时间：2020-06-23 14:14:38,928 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+ShowWaiting 
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Forms.ShowWaiting..ctor(Control ctl, String Msg) 位置 D:\work\WH024_SCSTZD\trunk\40_代码管理\PsstsClient\Forms\ShowWaiting.cs:行号 30
+   在 PsstsClient.Utility.Common.ShowWaiting(Control ctl, String Msg) 位置 D:\work\WH024_SCSTZD\trunk\40_代码管理\PsstsClient\Utility\Common.cs:行号 80

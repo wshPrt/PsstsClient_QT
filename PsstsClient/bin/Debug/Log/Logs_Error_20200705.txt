@@ -1,0 +1,49 @@
+异常时间：2020-07-05 15:42:59,211 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+心跳异常 
+ System.Net.Sockets.SocketException (0x80004005): 你的主机中的软件中止了一个已建立的连接。
+   在 PsstsClient.Utility.SocketHelper.SendHeartbeat() 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Utility\SocketHelper.cs:行号 179
+   在 PsstsClient.Main.timer_Heartbeat_Tick(Object sender, EventArgs e) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Main.cs:行号 390
+异常时间：2020-07-05 17:29:56,674 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36
+异常时间：2020-07-05 17:30:02,925 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36
+异常时间：2020-07-05 17:31:57,822 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36
+异常时间：2020-07-05 21:32:47,421 [5] 线程ID:[5] 异常级别：ERROR 异 常 类：logerror 
+无法访问已释放的对象。
+对象名:“ShowWaiting”。 
+ System.ObjectDisposedException: 无法访问已释放的对象。
+对象名:“ShowWaiting”。
+   在 System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   在 System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   在 System.Windows.Forms.Control.Invoke(Delegate method)
+   在 PsstsClient.Forms.ShowWaiting.timer_Elapsed(Object sender, ElapsedEventArgs e) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Forms\ShowWaiting.cs:行号 103
+异常时间：2020-07-05 21:34:40,738 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36
+异常时间：2020-07-05 21:40:04,141 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36

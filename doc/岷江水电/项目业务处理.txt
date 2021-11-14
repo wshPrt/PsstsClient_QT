@@ -1,0 +1,5 @@
+终端项目的程序业务处理部分在DataParse.java类中
+
+scoket类  PosTransServerProxy.java   PosCommunications.java
+
+socket端口 PosConfig.properties

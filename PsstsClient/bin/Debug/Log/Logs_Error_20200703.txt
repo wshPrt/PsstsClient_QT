@@ -1,0 +1,28 @@
+异常时间：2020-07-03 22:06:24,980 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+发送数据异常 
+ System.Net.Sockets.SocketException (0x80004005): 你的主机中的软件中止了一个已建立的连接。
+   在 PsstsClient.Utility.SocketHelper.Send(Byte[] data, Byte msgType, Byte[]& _recBodyData, Byte compEncry) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Utility\SocketHelper.cs:行号 128
+   在 PsstsClient.Service.BaseBusinessService.SendData(String msgBody) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\BaseBusinessService.cs:行号 96
+异常时间：2020-07-03 22:06:54,847 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 47
+异常时间：2020-07-03 22:07:17,241 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+心跳异常 
+ System.Net.Sockets.SocketException (0x80004005): 你的主机中的软件中止了一个已建立的连接。
+   在 PsstsClient.Utility.SocketHelper.SendHeartbeat() 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Utility\SocketHelper.cs:行号 179
+   在 PsstsClient.Main.timer_Heartbeat_Tick(Object sender, EventArgs e) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Main.cs:行号 390
+异常时间：2020-07-03 22:53:22,780 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36
+异常时间：2020-07-03 22:53:36,269 [1] 线程ID:[1] 异常级别：ERROR 异 常 类：logerror 
+操作员登录接口调用异常 
+ System.ArgumentException: 已添加项。字典中的关键字:“terminalNo”所添加的关键字:“terminalNo”
+   在 System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   在 System.Collections.Hashtable.Add(Object key, Object value)
+   在 PsstsClient.Entity.BusinessDataEntity.AddJsonData(Hashtable data) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Entity\BusinessDataEntity.cs:行号 67
+   在 PsstsClient.Service.CommonService.ChargeEmpLogin(String terminalNo, String username, String pwd, String& msg) 位置 E:\work\work\WH024_SCSTZD(永安电力)\trunk\40_代码管理\PsstsClient\Service\CommonService.cs:行号 36

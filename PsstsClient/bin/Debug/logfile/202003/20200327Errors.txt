@@ -1,0 +1,6 @@
+﻿11:41:52	确定结束投币	停止验钞[System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Forms.Pay.InputCashSim.pb_ok_Click(Object sender, EventArgs e) 位置 E:\Work\四川三台\自助终端\PsstsClient\Forms\Pay\InputCashSim.cs:行号 469]
+12:03:32	确定结束投币	停止验钞[System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Forms.Pay.InputCashSim.pb_ok_Click(Object sender, EventArgs e) 位置 E:\Work\四川三台\自助终端\PsstsClient\Forms\Pay\InputCashSim.cs:行号 469]
+12:33:43	确定结束投币	停止验钞[System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 PsstsClient.Forms.Pay.InputCashSim.pb_ok_Click(Object sender, EventArgs e) 位置 E:\Work\四川三台\自助终端\PsstsClient\Forms\Pay\InputCashSim.cs:行号 469]

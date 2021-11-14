@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E72D6A98-CE0E-4ADF-9799-19AC26805843}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PsstsClient</RootNamespace>
+    <AssemblyName>PsstsClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>DIC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentFTP, Version=32.4.1.0, Culture=neutral, PublicKeyToken=f4af092b1d8df44f, processorArchitecture=MSIL">
+      <HintPath>packages\FluentFTP.32.4.1\lib\net45\FluentFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.3.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.3.9\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\BankInfo.cs" />
+    <Compile Include="Bll\B_Common.cs" />
+    <Compile Include="Bll\B_LocalData.cs" />
+    <Compile Include="Bll\B_Reconciliation.cs" />
+    <Compile Include="Bll\Client.cs" />
+    <Compile Include="Bll\DevInfo.cs" />
+    <Compile Include="Bll\Forms.cs" />
+    <Compile Include="Bll\MemberCommon.cs" />
+    <Compile Include="Bll\ScreenInfo.cs" />
+    <Compile Include="Driver\CardReaderAPI.cs" />
+    <Compile Include="Driver\CardReaderDriver.cs" />
+    <Compile Include="Driver\CashCodeAPI.cs" />
+    <Compile Include="Driver\CashCodeDriver.cs" />
+    <Compile Include="Driver\DicCRT310Reader.cs" />
+    <Compile Include="Driver\DriverCommon.cs" />
+    <Compile Include="Driver\ICReaderAPI.cs" />
+    <Compile Include="Driver\ICReaderDriver.cs" />
+    <Compile Include="Driver\MetalKeyboardAPI.cs" />
+    <Compile Include="Driver\MetalKeyDriver.cs" />
+    <Compile Include="Driver\PrintAPI.cs" />
+    <Compile Include="Driver\ThermalPrinterDriver.cs" />
+    <Compile Include="Entity\BaseDataEntity.cs" />
+    <Compile Include="Entity\BusinessDataEntity.cs" />
+    <Compile Include="Entity\CardInfoEntity.cs" />
+    <Compile Include="Entity\LocalData\CashTranRecord.cs" />
+    <Compile Include="Entity\LocalData\WriteCardrRcord.cs" />
+    <Compile Include="Entity\PrintData.cs" />
+    <Compile Include="Entity\PrintInfoEntity.cs" />
+    <Compile Include="Entity\RecContext.cs" />
+    <Compile Include="Forms\Hardware\UPHardwareCom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\UPHardwareCom.Designer.cs">
+      <DependentUpon>UPHardwareCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\ScanCodePaySim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\ScanCodePaySim.Designer.cs">
+      <DependentUpon>ScanCodePaySim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryElecInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryElecInfo.designer.cs">
+      <DependentUpon>QueryElecInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryBasicInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryBasicInfo.designer.cs">
+      <DependentUpon>QueryBasicInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryFeesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryFeesInfo.Designer.cs">
+      <DependentUpon>QueryFeesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryIndex.designer.cs">
+      <DependentUpon>QueryIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryPowerPurchaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryPowerPurchaseInfo.Designer.cs">
+      <DependentUpon>QueryPowerPurchaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ArchivesService.cs" />
+    <Compile Include="Service\BusinessBindService.cs" />
+    <Compile Include="Service\CashChkFeeService.cs" />
+    <Compile Include="Service\CommonService.cs" />
+    <Compile Include="Service\ICCardService.cs" />
+    <Compile Include="Service\LedgerService.cs" />
+    <Compile Include="Service\Parameter\P_CardQueryCheck.cs" />
+    <Compile Include="Service\Parameter\P_Check.cs" />
+    <Compile Include="Service\Parameter\P_Pay.cs" />
+    <Compile Include="Service\Parameter\P_WriteUP.cs" />
+    <Compile Include="Service\PayResultService.cs" />
+    <Compile Include="Service\PayService.cs" />
+    <Compile Include="Service\PostpaidService.cs" />
+    <Compile Include="Service\PrepaidService.cs" />
+    <Compile Include="Service\RecData\R_Arrearage.cs" />
+    <Compile Include="Service\RecData\R_CardQueryCheck.cs" />
+    <Compile Include="Service\RecData\R_CashChk.cs" />
+    <Compile Include="Service\RecData\R_ElectricInfo.cs" />
+    <Compile Include="Service\RecData\R_Fees.cs" />
+    <Compile Include="Service\RecData\R_Pay.cs" />
+    <Compile Include="Entity\RecMessageEntity.cs" />
+    <Compile Include="Forms\ChangePwdSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePwdSim.designer.cs">
+      <DependentUpon>ChangePwdSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExitPwdSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExitPwdSim.designer.cs">
+      <DependentUpon>ExitPwdSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HardwareTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HardwareTest.designer.cs">
+      <DependentUpon>HardwareTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\CardReaderTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\CardReaderTest.designer.cs">
+      <DependentUpon>CardReaderTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\CashCodeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\CashCodeTest.designer.cs">
+      <DependentUpon>CashCodeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\ICReaderTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\ICReaderTest.designer.cs">
+      <DependentUpon>ICReaderTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\MetalKeyboardTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\MetalKeyboardTest.designer.cs">
+      <DependentUpon>MetalKeyboardTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\NetTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\NetTest.designer.cs">
+      <DependentUpon>NetTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hardware\ThermalPrinterTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hardware\ThermalPrinterTest.designer.cs">
+      <DependentUpon>ThermalPrinterTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainFormSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormSim.designer.cs">
+      <DependentUpon>MainFormSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\InputCashSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\InputCashSim.designer.cs">
+      <DependentUpon>InputCashSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\PayResultSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\PayResultSim.designer.cs">
+      <DependentUpon>PayResultSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\ShowCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\ShowCommit.designer.cs">
+      <DependentUpon>ShowCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pay\ShowMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pay\ShowMsg.Designer.cs">
+      <DependentUpon>ShowMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\CashQuerySim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\CashQuerySim.designer.cs">
+      <DependentUpon>CashQuerySim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\InputIcCardSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\InputIcCardSim.designer.cs">
+      <DependentUpon>InputIcCardSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\IputCustomeridSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\IputCustomeridSim.designer.cs">
+      <DependentUpon>IputCustomeridSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryBankPayLogSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryBankPayLogSim.designer.cs">
+      <DependentUpon>QueryBankPayLogSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryCashPayLogSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryCashPayLogSim.designer.cs">
+      <DependentUpon>QueryCashPayLogSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryHistoryBankPayLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryHistoryBankPayLog.designer.cs">
+      <DependentUpon>QueryHistoryBankPayLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\QueryHistoryCashPayLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\QueryHistoryCashPayLog.designer.cs">
+      <DependentUpon>QueryHistoryCashPayLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Query\RecoverVersionSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Query\RecoverVersionSim.designer.cs">
+      <DependentUpon>RecoverVersionSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowWaiting.designer.cs">
+      <DependentUpon>ShowWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SuspendedFormSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SuspendedFormSim.designer.cs">
+      <DependentUpon>SuspendedFormSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SysMaintainSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SysMaintainSim.designer.cs">
+      <DependentUpon>SysMaintainSim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BaseBusinessService.cs" />
+    <Compile Include="Service\demoService.cs" />
+    <Compile Include="Service\RecData\R_PayBill.cs" />
+    <Compile Include="Service\RecData\R_PayMessage.cs" />
+    <Compile Include="Service\RecData\R_PayResult.cs" />
+    <Compile Include="Service\RecData\R_PrepaidServicePayBill.cs" />
+    <Compile Include="Service\RecData\R_PurchaseInfo.cs" />
+    <Compile Include="Service\RecData\R_QueryCashChkFee.cs" />
+    <Compile Include="Service\RecData\R_WriteUP.cs" />
+    <Compile Include="Utility\Common.cs" />
+    <Compile Include="Utility\DataTableToModel.cs" />
+    <Compile Include="Utility\DbOperate.cs" />
+    <Compile Include="Utility\DevStatic.cs" />
+    <Compile Include="Utility\EncryDecrypt.cs" />
+    <Compile Include="Utility\FileHelper.cs" />
+    <Compile Include="Utility\FTPUtil.cs" />
+    <Compile Include="Utility\Global.cs" />
+    <Compile Include="Utility\GZipUtil.cs" />
+    <Compile Include="Utility\IdWorker.cs" />
+    <Compile Include="Utility\Log4NetHelper.cs" />
+    <Compile Include="Utility\PayLogStatic.cs" />
+    <Compile Include="Service\RecData\R_QueryCustomerInfo.cs" />
+    <Compile Include="Utility\QRCodeUtil.cs" />
+    <Compile Include="Utility\SocketHelper.cs" />
+    <Compile Include="Utility\SoundUtil.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\SystemAPI.cs" />
+    <EmbeddedResource Include="Forms\ChangePwdSim.resx">
+      <DependentUpon>ChangePwdSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExitPwdSim.resx">
+      <DependentUpon>ExitPwdSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HardwareTest.resx">
+      <DependentUpon>HardwareTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\CardReaderTest.resx">
+      <DependentUpon>CardReaderTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\CashCodeTest.resx">
+      <DependentUpon>CashCodeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\ICReaderTest.resx">
+      <DependentUpon>ICReaderTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\MetalKeyboardTest.resx">
+      <DependentUpon>MetalKeyboardTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\NetTest.resx">
+      <DependentUpon>NetTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\ThermalPrinterTest.resx">
+      <DependentUpon>ThermalPrinterTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hardware\UPHardwareCom.resx">
+      <DependentUpon>UPHardwareCom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormSim.resx">
+      <DependentUpon>MainFormSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\InputCashSim.resx">
+      <DependentUpon>InputCashSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\PayResultSim.resx">
+      <DependentUpon>PayResultSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\ScanCodePaySim.resx">
+      <DependentUpon>ScanCodePaySim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\ShowCommit.resx">
+      <DependentUpon>ShowCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pay\ShowMsg.resx">
+      <DependentUpon>ShowMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryElecInfo.resx">
+      <DependentUpon>QueryElecInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryBasicInfo.resx">
+      <DependentUpon>QueryBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryFeesInfo.resx">
+      <DependentUpon>QueryFeesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryIndex.resx">
+      <DependentUpon>QueryIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\CashQuerySim.resx">
+      <DependentUpon>CashQuerySim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\InputIcCardSim.resx">
+      <DependentUpon>InputIcCardSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\IputCustomeridSim.resx">
+      <DependentUpon>IputCustomeridSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryBankPayLogSim.resx">
+      <DependentUpon>QueryBankPayLogSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryCashPayLogSim.resx">
+      <DependentUpon>QueryCashPayLogSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryHistoryBankPayLog.resx">
+      <DependentUpon>QueryHistoryBankPayLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryHistoryCashPayLog.resx">
+      <DependentUpon>QueryHistoryCashPayLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\QueryPowerPurchaseInfo.resx">
+      <DependentUpon>QueryPowerPurchaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Query\RecoverVersionSim.resx">
+      <DependentUpon>RecoverVersionSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowWaiting.resx">
+      <DependentUpon>ShowWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SuspendedFormSim.resx">
+      <DependentUpon>SuspendedFormSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SysMaintainSim.resx">
+      <DependentUpon>SysMaintainSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClientParam.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="ImportDLL\DicCRT310Reader.lib" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DIC.ico" />
+    <Content Include="ImportDLL\CashCodeDll.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\CRT310Interface.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\CRT_310.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\DicCRT310Reader.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\DicCRT310Reader.h" />
+    <Content Include="ImportDLL\DicICReader.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\DicICReader.h" />
+    <Content Include="ImportDLL\mwic_32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\Mwic_32.h" />
+    <Content Include="ImportDLL\SCPPRINT.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ImportDLL\ZT_EPP_API.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrintModel\clean.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrintModel\comm.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrintModel\cardpay.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PrintModel\paying.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PsstsClient.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\bg_main1.png" />
+    <Content Include="Resources\bg_mainsim.png" />
+    <None Include="Resources\bg_userinfo.png" />
+    <None Include="Resources\bg_money.png" />
+    <Content Include="Resources\btn_back2.png" />
+    <Content Include="Resources\btn_exit.png" />
+    <Content Include="Resources\flashbg.png" />
+    <None Include="Resources\loading.gif" />
+    <Content Include="Resources\pb_0_01.gif" />
+    <Content Include="Resources\pb_1_01.gif" />
+    <Content Include="Resources\pb_2_01.gif" />
+    <Content Include="Resources\pb_3_01.gif" />
+    <Content Include="Resources\pb_4_01.gif" />
+    <Content Include="Resources\pb_5_01.gif" />
+    <Content Include="Resources\pb_6_01.gif" />
+    <Content Include="Resources\pb_7_01.gif" />
+    <Content Include="Resources\pb_8_01.gif" />
+    <Content Include="Resources\pb_9_01.gif" />
+    <Content Include="Resources\pb_back_01.png" />
+    <Content Include="Resources\pb_back_top01.png" />
+    <Content Include="Resources\pb_jh_01.png" />
+    <Content Include="Resources\pb_ok01.gif" />
+    <Content Include="Resources\pb_ok_01.png" />
+    <Content Include="Resources\pb_pay_bank01.png" />
+    <Content Include="Resources\pb_pay_bank_01.png" />
+    <Content Include="Resources\pb_pay_cash01.png" />
+    <Content Include="Resources\pb_pay_cash_01.png" />
+    <Content Include="Resources\pb_pay_ic1.png" />
+    <Content Include="Resources\pb_pay_loopstrorage.png" />
+    <None Include="Resources\pb_pay_saoma01.png" />
+    <None Include="Resources\pb_pay_weixin.png" />
+    <Content Include="Resources\pb_qk_01.png" />
+    <None Include="Resources\pb_query_basicinfo.png" />
+    <None Include="Resources\pb_query_powerpurchaseinfo.png" />
+    <None Include="Resources\pb_query_electricchargeinfo.png" />
+    <None Include="Resources\pb_query_feesinfo.png" />
+    <None Include="Resources\pb_query_prev.gif" />
+    <None Include="Resources\pb_query_next.gif" />
+    <Content Include="Resources\pb_xh_01.png" />
+    <None Include="Resources\qrcode.png" />
+    <None Include="Resources\qtb_s.gif" />
+    <Content Include="Resources\sub_bg011.png" />
+    <Content Include="Resources\sub_bgblank01.png" />
+    <Content Include="Resources\sub_bgblank02.png" />
+    <None Include="Resources\sub_bgcash0211.png" />
+    <Content Include="Resources\sub_bgcash0311.png" />
+    <Content Include="Resources\sub_bgcash0321.png" />
+    <Content Include="Resources\sub_bgic1.png" />
+    <None Include="Resources\sub_scanpay.png" />
+    <None Include="Resources\sub_bgquery01.jpg" />
+    <None Include="Resources\sub_bgquery_detailed.jpg" />
+    <Content Include="Resources\suspended.png" />
+    <Content Include="Sound\cardinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\checkcardinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\checkcustomerinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\checkfeeinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\checkinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\commitcardinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\commitMoney.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\dobusiness.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\dobusiness1.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\inputcustomerid.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\inputpwd.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\insertcard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\insertmoney.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\insertmoneycard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\nofeerecode.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\overprintinvoice.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\overprintslip.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\preinfo.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\printinvoice.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\printslip.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\readcard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\removemoney.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\saygoodbye.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\selectpaymode.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\welcome.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\writecard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\writecardfail.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\writecardsuccess.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
